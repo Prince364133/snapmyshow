@@ -54,7 +54,7 @@ export default function SuccessClient({ booking: initialBooking, bookingId }: { 
     }
   };
 
-  if (loading || !booking) {
+  if (loading) {
     return (
       <div className="bg-white min-h-screen flex items-center justify-center p-4">
         <div className="text-center space-y-6">
@@ -62,6 +62,33 @@ export default function SuccessClient({ booking: initialBooking, bookingId }: { 
           <p className="text-sm font-black uppercase tracking-widest text-[#1F2533]">Finalizing your ticket...</p>
         </div>
       </div>
+    );
+  }
+
+  // Handle Mock or Not Found
+  if (!booking || bookingId.startsWith('mock_')) {
+    return (
+        <div className="bg-white min-h-screen py-16 md:py-24 px-4 flex items-center justify-center">
+            <div className="max-w-md w-full bg-white rounded-[2.5rem] shadow-2xl shadow-gray-100 border border-gray-100 p-12 text-center">
+                <div className="w-20 h-20 bg-gray-50 rounded-[1.5rem] flex items-center justify-center mx-auto mb-8 border border-gray-100">
+                    <Ticket className="h-10 w-10 text-gray-300" />
+                </div>
+                <h2 className="text-2xl font-black text-[#1F2533] uppercase tracking-tighter mb-4">
+                    {bookingId.startsWith('mock_') ? 'Test Booking' : 'Booking Not Found'}
+                </h2>
+                <p className="text-xs font-black uppercase tracking-widest text-gray-400 leading-relaxed mb-10">
+                    {bookingId.startsWith('mock_') 
+                        ? 'This is a simulation booking for testing purposes. Real ticket data is only generated for official screenings.' 
+                        : 'We could not retrieve your ticket details. Please check your "My Bookings" section or try again.'}
+                </p>
+                <Button 
+                    onClick={() => window.location.href = '/'}
+                    className="w-full bg-[#1F2533] h-14 rounded-2xl font-black uppercase tracking-widest text-[10px] shadow-xl active:scale-95"
+                >
+                    Return to Homepage
+                </Button>
+            </div>
+        </div>
     );
   }
 

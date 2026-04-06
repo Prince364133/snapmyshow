@@ -4,24 +4,28 @@ import { Skeleton } from "@/components/ui/skeleton";
 import SuccessClient from "./SuccessClient";
 
 
+export const dynamic = 'force-dynamic';
+
 async function getBooking(id: string) {
   try {
     const cookieStore = await cookies();
     const token = cookieStore.get('token')?.value;
-    const refreshToken = cookieStore.get('refreshToken')?.value;
     
-    // Pass cookies to internal server-side fetch
+    // Add timeout to prevent hang
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 8000);
+
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:6005'}/api/bookings/${id}`, { 
       cache: 'no-store',
+      signal: controller.signal,
       headers: {
-        'Cookie': `token=${token}; refreshToken=${refreshToken}`
+        'Authorization': `Bearer ${token}`
       }
     });
     
-    if (!res.ok) {
-       console.warn(`Booking fetch failed: ${res.status}`);
-       return null;
-    }
+    clearTimeout(timeoutId);
+    
+    if (!res.ok) return null;
     const data = await res.json();
     return data.data ?? null;
   } catch (err) {

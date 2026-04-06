@@ -44,17 +44,6 @@ exports.createBooking = async (req, res, next) => {
         await session.withTransaction(async () => {
             totalAmount = seats.reduce((sum, s) => sum + s.price, 0);
             
-            const [newBooking] = await Booking.create([{
-                userId: req.user.id,
-                showtimeId: showtime._id,
-                theaterId: showtime.theaterId._id,
-                seats,
-                totalAmount,
-                qrToken: 'PENDING_GENERATION'
-            }], { session });
-
-            booking = newBooking;
-
             // Generate full signed QR token with 2h post-showtime expiry
             // Handle both 24h (HH:mm) and 12h (HH:mm AM/PM) formats
             let [time, modifier] = showtime.startTime.split(' ');
@@ -70,20 +59,31 @@ exports.createBooking = async (req, res, next) => {
             
             // Fallback: If calculation results in NaN or is in the past, default to 24 hours from now
             if (isNaN(expiresInSeconds) || expiresInSeconds <= 0) {
-                console.warn(`Invalid QR expiry calculation for showtime ${showtime._id}. Falling back to 24h.`);
                 expiresInSeconds = 24 * 60 * 60;
             }
 
-            booking.qrToken = jwt.sign({ 
-                bookingId: booking._id,
+            const tempBookingId = new mongoose.Types.ObjectId();
+            const qrToken = jwt.sign({ 
+                bookingId: tempBookingId,
                 userId: req.user.id,
                 showtimeId: showtime._id,
                 iat: Math.floor(Date.now() / 1000)
             }, process.env.JWT_SECRET, { 
                 expiresIn: expiresInSeconds
             });
-            
-            await booking.save({ session });
+
+            const [newBooking] = await Booking.create([{
+                _id: tempBookingId,
+                userId: req.user.id,
+                showtimeId: showtime._id,
+                theaterId: showtime.theaterId._id,
+                seats,
+                totalAmount,
+                qrToken: qrToken,
+                status: 'PAID_AT_VENUE'
+            }], { session });
+
+            booking = newBooking;
 
             // 4. Update Showtime with booked seats (Pending)
             showtime.bookedSeats.push(...seats.map(s => ({ row: s.row, col: s.col, user: req.user.id })));
