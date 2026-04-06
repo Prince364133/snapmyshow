@@ -129,18 +129,18 @@ export default function BookingClient({ showtime }: BookingClientProps) {
       
       {/* Floating Bottom Action Bar */}
       {selectedSeats.length > 0 && (
-          <div className="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-xl border-t border-gray-100 shadow-[0_-20px_50px_rgba(0,0,0,0.05)] z-50">
-             <div className="container mx-auto px-12 max-w-5xl h-24 flex items-center justify-between">
+          <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-t border-gray-100 shadow-[0_-10px_40px_rgba(0,0,0,0.08)] z-50 pb-safe">
+             <div className="container mx-auto px-4 md:px-12 max-w-5xl h-20 md:h-24 flex items-center justify-between">
                  <div className="flex flex-col">
-                     <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Selected Overview</span>
+                     <span className="text-[9px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest mb-0.5 md:mb-1">Selected Overview</span>
                      <div className="flex items-center gap-2">
-                        <span className="text-2xl font-black text-[#1F2533] uppercase tracking-tighter">{selectedSeats.length} Seats</span>
-                        <span className="text-primary font-black text-lg ml-2">₹{selectedSeats.length * 250}.00</span>
+                        <span className="text-xl md:text-2xl font-black text-[#1F2533] uppercase tracking-tighter">{selectedSeats.length} Seats</span>
+                        <span className="text-primary font-black text-base md:text-lg ml-1 md:ml-2">₹{selectedSeats.length * 250}.00</span>
                      </div>
                  </div>
                  <button 
                   onClick={handleProceed} 
-                  className="bg-primary hover:bg-rose-600 text-white px-20 h-14 rounded-2xl font-black uppercase tracking-widest text-[11px] transition-all shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 flex items-center gap-3"
+                  className="bg-primary hover:bg-rose-600 text-white px-6 md:px-20 h-12 md:h-14 rounded-xl md:rounded-2xl font-black uppercase tracking-widest text-[10px] md:text-[11px] transition-all shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 flex items-center gap-2 md:gap-3 shrink-0"
                  >
                      Check Review <ChevronLeft className="h-4 w-4 rotate-180" />
                  </button>
