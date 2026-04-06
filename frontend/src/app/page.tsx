@@ -1,7 +1,9 @@
 import { Metadata } from "next";
 import HomeClient from "./HomeClient";
 
-export const revalidate = 1800; // 30 mins ISR
+// Force dynamic rendering - prevents build-time fetch timeout
+// Data is fetched fresh on each request, not at build time
+export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'SnapMyShow — Book Movie Tickets Online',
@@ -11,11 +13,19 @@ export const metadata: Metadata = {
 export default async function HomePage() {
   let movies = [];
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:6005"}/api/movies`, { next: { revalidate: 1800 } });
-    const data = await res.json();
-    movies = data.data || [];
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:6005";
+    const res = await fetch(`${apiUrl}/api/movies`, {
+      // 5-second timeout — avoids hanging on Vercel if backend is cold
+      signal: AbortSignal.timeout(5000),
+      next: { revalidate: 0 },
+    });
+    if (res.ok) {
+      const data = await res.json();
+      movies = data.data || [];
+    }
   } catch (e) {
-    console.error("Home data fetch failed", e);
+    // Backend unavailable during build — HomeClient will fetch client-side
+    console.error("Home SSR data fetch skipped:", e instanceof Error ? e.message : e);
   }
 
   const jsonLd = {

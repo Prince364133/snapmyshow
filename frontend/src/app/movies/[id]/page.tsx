@@ -10,13 +10,15 @@ export const revalidate = 3600; // 1 hour ISR
  */
 export async function generateStaticParams() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:6005'}/api/movies?limit=100`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:6005'}/api/movies?limit=100`, {
+      signal: AbortSignal.timeout(5000),
+    });
     const data = await res.json();
-    return data.data.map((movie: any) => ({
+    return (data.data || []).map((movie: any) => ({
       id: movie._id,
     }));
   } catch (e) {
-    return [];
+    return []; // Return empty — pages will be rendered on-demand
   }
 }
 
@@ -26,7 +28,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   try {
     const { id } = await params;
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:6005'}/api/movies/${id}`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:6005'}/api/movies/${id}`, { signal: AbortSignal.timeout(5000) });
     const data = await res.json();
     const movie = data.data;
 
@@ -60,11 +62,12 @@ export default async function MoviePage({ params }: { params: Promise<{ id: stri
   let showtimes = [];
   let similarMovies: any[] = [];
   try {
-    const movieRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:6005'}/api/movies/${id}`, { next: { revalidate: 3600 } });
+    const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:6005';
+    const movieRes = await fetch(`${API}/api/movies/${id}`, { signal: AbortSignal.timeout(8000), next: { revalidate: 3600 } });
     const movieData = await movieRes.json();
     movie = movieData.data;
 
-    const showsRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:6005'}/api/showtimes?movieId=${id}`, { next: { revalidate: 1800 } });
+    const showsRes = await fetch(`${API}/api/showtimes?movieId=${id}`, { signal: AbortSignal.timeout(8000), next: { revalidate: 1800 } });
     const showsData = await showsRes.json();
     showtimes = showsData.data || [];
 
@@ -72,8 +75,8 @@ export default async function MoviePage({ params }: { params: Promise<{ id: stri
     if (movie && movie.genre?.length > 0) {
       const genre = encodeURIComponent(movie.genre[0]);
       const simRes = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:6005'}/api/movies?genre=${genre}`,
-        { next: { revalidate: 3600 } }
+        `${API}/api/movies?genre=${genre}`,
+        { signal: AbortSignal.timeout(5000), next: { revalidate: 3600 } }
       );
       const simData = await simRes.json();
       // Exclude the current movie
