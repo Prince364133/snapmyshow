@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import api from "@/lib/api";
 
-export default function LoginSuccessPage() {
+function LoginSuccessHandler() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { login } = useAuth();
@@ -42,5 +42,17 @@ export default function LoginSuccessPage() {
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-xl font-medium text-gray-700">Authenticating...</div>
     </div>
+  );
+}
+
+export default function LoginSuccessPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-xl font-medium text-gray-700">Loading...</div>
+      </div>
+    }>
+      <LoginSuccessHandler />
+    </Suspense>
   );
 }

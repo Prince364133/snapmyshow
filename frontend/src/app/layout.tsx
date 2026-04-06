@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -15,6 +15,13 @@ const inter = Inter({
   preload: true
 });
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: '#E11D48',
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://snapmyshow.com'),
   title: {
@@ -24,8 +31,8 @@ export const metadata: Metadata = {
   description: 'The fastest way to book movie tickets in India. Choose your favorite seats, get an instant QR ticket, and pay at the theater.',
   keywords: ['movie tickets', 'book movie tickets', 'cinema showtimes', 'theater booking', 'MNR cinema', 'online ticket booking'],
 
-  authors: [{ name: 'BookMyShow' }],
-  creator: 'BookMyShow',
+  authors: [{ name: 'SnapMyShow' }],
+  creator: 'SnapMyShow',
   openGraph: {
     type: 'website',
     locale: 'en_IN',
@@ -36,8 +43,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    site: '@showbook',
-    creator: '@showbook'
+    site: '@snapmyshow',
+    creator: '@snapmyshow'
   },
   robots: {
     index: true,
@@ -48,8 +55,6 @@ export const metadata: Metadata = {
     google: 'YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE'
   },
   manifest: '/manifest.json',
-  themeColor: '#E11D48',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
 };
 
 export default function RootLayout({

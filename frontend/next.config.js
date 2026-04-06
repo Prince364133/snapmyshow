@@ -1,12 +1,12 @@
-const withPWA = require("next-pwa")({
-  dest: "public",
-  disable: process.env.NODE_ENV === "development",
-  register: true,
-  skipWaiting: true,
-});
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-});
+// const withPWA = require("next-pwa")({
+//   dest: "public",
+//   disable: process.env.NODE_ENV === "development",
+//   register: true,
+//   skipWaiting: true,
+// });
+// const withBundleAnalyzer = require("@next/bundle-analyzer")({
+//   enabled: process.env.ANALYZE === "true",
+// });
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -26,7 +26,7 @@ const nextConfig = {
         pathname: "/**",
       },
       {
-        protocol: "https",
+	protocol: "https",
         hostname: "images.unsplash.com",
         port: "",
         pathname: "/**",
@@ -56,9 +56,6 @@ const nextConfig = {
   experimental: {
     optimizeCss: false,
   },
-
 };
 
-module.exports = withBundleAnalyzer(
-  withPWA(nextConfig)
-);
+module.exports = nextConfig;

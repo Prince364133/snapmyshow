@@ -1,0 +1,645 @@
+﻿
+> frontend@0.1.0 build C:\Users\saavi\OneDrive\Desktop\bmyshoe\frontend
+> next build
+
+Γû▓ Next.js 16.2.2 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 9.1s
+  Running TypeScript ...
+  Finished TypeScript in 11.9s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/45) ...
+node.exe : ΓÜá 
+Unsupported metadata 
+themeColor is 
+configured in metadata 
+export in /movies. 
+Please move it to 
+viewport export instead.
+At C:\Users\saavi\AppDat
+a\Roaming\npm\pnpm.ps1:2
+4 char:5
++     & "node$exe"  "$ba
+sedir/node_modules/pnpm/
+bin/pnpm.cjs" $args
++     ~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo      
+        : NotSpecified: 
+(ΓÜá     
+Unsupported...export    
+ instead.:String) [], R 
+   emoteException
+    + 
+FullyQualifiedErrorI    
+d : NativeCommandError
+ 
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /movies. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in 
+/admin/movies. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in 
+/admin/movies. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /_not-found. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /_not-found. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /my-bookings. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /my-bookings. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in 
+/admin/dashboard. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in 
+/admin/dashboard. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in 
+/admin/scanner. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in 
+/admin/scanner. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /offers. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /offers. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /offline. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /offline. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in 
+/admin/settings. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in 
+/admin/settings. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in 
+/admin/screens. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in 
+/admin/screens. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /onboarding. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /onboarding. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /admin. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /admin. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /movies/[id]. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /movies/[id]. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /movies/[id]. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /movies/[id]. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /movies/[id]. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /movies/[id]. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+  Generating static pages using 15 workers (11/45) 
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in 
+/admin/showtimes. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in 
+/admin/showtimes. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in 
+/admin/theaters. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in 
+/admin/theaters. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /booking/confi
+rmation/%5BbookingId%5D.
+ Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /booking/confi
+rmation/%5BbookingId%5D.
+ Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /booking/%5Bsh
+owtimeId%5D. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /booking/%5Bsh
+owtimeId%5D. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /coming-soon. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /coming-soon. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in 
+/admin/theaters/new. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in 
+/admin/theaters/new. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /gift-cards. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /gift-cards. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in /login. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in /login. 
+Please move it to 
+viewport export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata themeColor is 
+configured in metadata 
+export in 
+/login/success. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+ΓÜá Unsupported 
+metadata viewport is 
+configured in metadata 
+export in 
+/login/success. Please 
+move it to viewport 
+export instead.
+Read more: https://nextj
+s.org/docs/app/api-refer
+ence/functions/generate-
+viewport
+Γ¿» useSearchParams() 
+should be wrapped in a 
+suspense boundary at 
+page "/login/success". 
+Read more: https://nextj
+s.org/docs/messages/miss
+ing-suspense-with-csr-ba
+ilout
+    at S (C:\Users\saavi
+\OneDrive\Desktop\bmysho
+e\frontend\.next\server\
+chunks\ssr\0c-g_next_0od
+rbpw._.js:2:2692)
+    at r (C:\Users\saavi
+\OneDrive\Desktop\bmysho
+e\frontend\.next\server\
+chunks\ssr\0c-g_next_0od
+rbpw._.js:4:6760)
+    at C:\Users\saavi\On
+eDrive\Desktop\bmyshoe\f
+rontend\.next\server\chu
+nks\ssr\src_app_login_su
+ccess_page_tsx_0gb2v1d._
+.js:1:184
+    at an (C:\Users\saav
+i\OneDrive\Desktop\bmysh
+oe\frontend\node_modules
+\.pnpm\next@16.2.2_@babe
+l+core@7.2_adfc5978a423a
+2af819d8e4d2c5f7ae4\node
+_modules\next\dist\compi
+led\next-server\app-page
+-turbo.runtime.prod.js:2
+:84267)
+    at ai (C:\Users\saav
+i\OneDrive\Desktop\bmysh
+oe\frontend\node_modules
+\.pnpm\next@16.2.2_@babe
+l+core@7.2_adfc5978a423a
+2af819d8e4d2c5f7ae4\node
+_modules\next\dist\compi
+led\next-server\app-page
+-turbo.runtime.prod.js:2
+:86086)
+    at al (C:\Users\saav
+i\OneDrive\Desktop\bmysh
+oe\frontend\node_modules
+\.pnpm\next@16.2.2_@babe
+l+core@7.2_adfc5978a423a
+2af819d8e4d2c5f7ae4\node
+_modules\next\dist\compi
+led\next-server\app-page
+-turbo.runtime.prod.js:2
+:107860)
+    at ao (C:\Users\saav
+i\OneDrive\Desktop\bmysh
+oe\frontend\node_modules
+\.pnpm\next@16.2.2_@babe
+l+core@7.2_adfc5978a423a
+2af819d8e4d2c5f7ae4\node
+_modules\next\dist\compi
+led\next-server\app-page
+-turbo.runtime.prod.js:2
+:105275)
+    at aa (C:\Users\saav
+i\OneDrive\Desktop\bmysh
+oe\frontend\node_modules
+\.pnpm\next@16.2.2_@babe
+l+core@7.2_adfc5978a423a
+2af819d8e4d2c5f7ae4\node
+_modules\next\dist\compi
+led\next-server\app-page
+-turbo.runtime.prod.js:2
+:84619)
+    at ai (C:\Users\saav
+i\OneDrive\Desktop\bmysh
+oe\frontend\node_modules
+\.pnpm\next@16.2.2_@babe
+l+core@7.2_adfc5978a423a
+2af819d8e4d2c5f7ae4\node
+_modules\next\dist\compi
+led\next-server\app-page
+-turbo.runtime.prod.js:2
+:86135)
+    at ai (C:\Users\saav
+i\OneDrive\Desktop\bmysh
+oe\frontend\node_modules
+\.pnpm\next@16.2.2_@babe
+l+core@7.2_adfc5978a423a
+2af819d8e4d2c5f7ae4\node
+_modules\next\dist\compi
+led\next-server\app-page
+-turbo.runtime.prod.js:2
+:104615)
+Error occurred 
+prerendering page 
+"/login/success". Read 
+more: https://nextjs.org
+/docs/messages/prerender
+-error
+Export encountered an 
+error on 
+/login/success/page: 
+/login/success, exiting 
+the build.
+Γ¿» Next.js build 
+worker exited with 
+code: 1 and signal: null
+ΓÇëELIFECYCLEΓÇë Command failed with exit code 1.

@@ -1,8 +1,18 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useToast } from "@/hooks/use-toast";
 import api from "@/lib/api";
 import { SEAT_TEMPLATES } from "@/lib/seatTemplates";
 import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { ChevronLeft, Plus, Monitor, Settings2, Trash2, LayoutGrid, Armchair } from "lucide-react";
 
 export default function AdminScreenManager() {
   const { toast } = useToast();
@@ -352,7 +362,7 @@ export default function AdminScreenManager() {
                                     <div className="h-12 w-12 rounded-xl bg-gray-50 flex items-center justify-center border border-gray-100 shadow-sm transition-colors group-hover:bg-primary group-hover:border-primary">
                                         <Monitor className="h-6 w-6 text-gray-400 group-hover:text-white transition-colors" />
                                     </div>
-                                    <Badge variant="ghost" className="bg-gray-50 text-[10px] font-black uppercase tracking-widest text-gray-500 px-3">
+                                    <Badge variant="outline" className="bg-gray-50 text-[10px] font-black uppercase tracking-widest text-gray-500 px-3">
                                         {screen.rows}R x {screen.columns}C
                                     </Badge>
                                 </div>

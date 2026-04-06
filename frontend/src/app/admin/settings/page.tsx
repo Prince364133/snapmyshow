@@ -23,6 +23,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import api from "@/lib/api";
 import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
 
 export default function AdminSettingsPage() {
   const { toast } = useToast();

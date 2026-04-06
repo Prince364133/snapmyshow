@@ -22,10 +22,10 @@ const createIcon = () => {
     });
 };
 
-function MapEventHandler({ onMarkerDrag }: { onMarkerDrag: (lat: number, lng: number) => void }) {
+function MapEventHandler({ onMarkerDrag }: { onMarkerDrag?: (lat: number, lng: number) => void }) {
     const map = useMapEvents({
         click(e) {
-            onMarkerDrag(e.latlng.lat, e.latlng.lng);
+            onMarkerDrag?.(e.latlng.lat, e.latlng.lng);
             map.flyTo(e.latlng, map.getZoom());
         },
     });
@@ -48,7 +48,7 @@ export default function LocationMap({ center, onMarkerDrag }: MapProps) {
                 const marker = markerRef.current;
                 if (marker != null) {
                     const { lat, lng } = marker.getLatLng();
-                    onMarkerDrag(lat, lng);
+                    onMarkerDrag?.(lat, lng);
                 }
             },
         }),
