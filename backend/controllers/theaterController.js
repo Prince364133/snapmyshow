@@ -86,22 +86,30 @@ exports.getTheatersByCity = async (req, res) => {
 exports.getNearestTheaters = async (req, res) => {
     try {
         const { lat, lng } = req.query;
-        // Use coordinates from query, or from middleware (IP-based)
-        const userLat = parseFloat(lat) || req.location?.lat || 28.6139;
-        const userLng = parseFloat(lng) || req.location?.lng || 77.2090;
+        let theaters;
 
-        const theaters = await Theater.aggregate([
-            {
-                $geoNear: {
-                    near: { type: "Point", coordinates: [userLng, userLat] },
-                    distanceField: "distance",
-                    spherical: true,
-                    distanceMultiplier: 0.001, // convert meters to km
-                    query: { status: 'ACTIVE' }
-                }
-            },
-            { $limit: 10 }
-        ]);
+        if (lat && lng) {
+            const userLat = parseFloat(lat);
+            const userLng = parseFloat(lng);
+
+            theaters = await Theater.aggregate([
+                {
+                    $geoNear: {
+                        near: { type: "Point", coordinates: [userLng, userLat] },
+                        distanceField: "distance",
+                        spherical: true,
+                        distanceMultiplier: 0.001, // convert meters to km
+                        query: { status: 'ACTIVE' }
+                    }
+                },
+                { $limit: 10 }
+            ]);
+        }
+
+        // Fallback: If no lat/lng provided OR no theaters found within radius, return all active theaters
+        if (!theaters || theaters.length === 0) {
+            theaters = await Theater.find({ status: 'ACTIVE' }).limit(10).sort('name');
+        }
 
         res.json({ success: true, data: theaters });
     } catch (error) {
