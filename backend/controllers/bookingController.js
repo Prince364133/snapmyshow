@@ -147,7 +147,11 @@ exports.getBooking = async (req, res, next) => {
             .populate('userId', 'name email')
             .populate({
                 path: 'showtimeId',
-                populate: { path: 'movieId theaterId screenId' }
+                populate: [
+                    { path: 'movieId' },
+                    { path: 'theaterId' },
+                    { path: 'screenId' }
+                ]
             });
         if (!booking) return next(new AppError('Booking not found', 404));
         // Only allow the owner to view their booking

@@ -17,16 +17,16 @@ const generateTicketPDF = async (booking) => {
         const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
         const boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
 
-        // Header - BookMyShow Branding
+        // Header - SnapMyShow Branding
         page.drawRectangle({
             x: 0,
             y: height - 80,
             width: 400,
             height: 80,
-            color: rgb(0.88, 0.11, 0.28) // #E11D48
+            color: rgb(0.12, 0.15, 0.20) // Darker Slate #1F2533 style
         });
-
-        page.drawText('BookMyShow Ticket', {
+        
+        page.drawText('SnapMyShow Ticket', {
             x: 50,
             y: height - 50,
             size: 24,
